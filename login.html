@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym managment system</title>
+    <link rel="stylesheet" href="./style/loginPage.css">
+    <link rel="stylesheet" href="./style/bootstrap.min.css">
+    <script src="./style/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    
+</head>
+<body>
+    <header class="fixed-top d-none">
+
+        <nav class="navbar navbar-expand-sm  bg-primary-subtle" id="navbar">
+
+            <div class="container-fluid">
+                
+                <a href="#" class="navbar-brand m-2 ms-lg-5 ">GYM MANAGMENT SYSTEM</a>
+                <button class="navbar-toggler " data-bs-toggle="collapse" data-bs-target="#navmenu">
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+                <div class=" collapse navbar-collapse justify-content-end me-lg-5 " id="navmenu">
+                    <ul class="navbar-nav mt-lg-0 mt-md-0 mt-sm-0 mt-3 text-center   ">
+                        <li class="nav-item  "><a href="" class=" nav-link  ">HOME</a></li>
+                        <li class="nav-item"><a href="" class="nav-link ">ABOUT</a></li>
+                        <li class="nav-item"><a href="" class="nav-link ">CONTACT</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">ADMIN</a></li>
+                        <li class="nav-item"><a href="./login.html" class="nav-link">LOGIN</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+        </nav>
+    </header>
+    <section>
+        
+        <div id="login" class="container  rounded-4 fade-transition">
+            <button class="btn btn-close btn-hide float-end"></button>
+            <h1 style="text-align: center; color:#2a6e7a ;" class="mt-3 text-primary-subtle">Login</h1>
+            <form action="">
+                <div class="form-floating mt-4">
+                    <span class="position-absolute end-0"><i class="bi bi-envelope-fill"></i></i></span>
+                    <input type="email" class="form-control bg-transparent border border-0 border-bottom border-dark" id="loginemail" placeholder="Enter email">
+                    <label for="" class="form-label">Email</label>
+                </div>
+                <div  class="form-floating mt-4" >
+                    <span class=" position-absolute end-0"><i class="bi bi-lock-fill"></i></i></span>
+                    <input type="password" class="form-control bg-transparent border border-0 border-bottom border-dark " id="loginpassword" placeholder="enter password">
+                    <label for="" class="form-label">Password</label>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6 mt-3">
+                        <input type="checkbox" name="" id="">
+                        <label for="">Remember me</label>
+
+                    </div>
+                    <div class="col-6 mt-3">
+                        <a href="" id="forget">Forget Password?</a>
+
+                    </div>
+                    <div class=" mt-3">
+                        <button class="btn btn-primary form-control" onclick="login()">Login</button>
+
+                    </div>
+                    <div class=" mt-3 text-center">
+                        <h6>Don't have an account?<a href="#register" id="btnreg">Register</a></h6>
+
+                    </div>
+
+                </div>
+
+            </form>
+    </section>
+    <script src="./ScriptFiles/login.js"></script>
+    
+    
+</body>
+</html>

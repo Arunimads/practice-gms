@@ -1,0 +1,83 @@
+<div class="container" style="max-width: 400px; margin-top: 50px">
+  <h1 class="text-center mb-4">Fitness Calculator</h1>
+
+  <form id="calculatorForm">
+    <div class="mb-3">
+      <label for="weight" class="form-label">Weight (kg):</label>
+      <input
+        type="number"
+        id="weight"
+        class="form-control"
+        min="0"
+        step="0.1"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="height" class="form-label">Height (cm):</label>
+      <input type="number" id="height" class="form-control" min="0" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="age" class="form-label">Age:</label>
+      <input type="number" id="age" class="form-control" min="0" required />
+    </div>
+
+    <label class="form-check-label">Gender:</label>
+    <div class="form-check mb-3">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="gender"
+        id="male"
+        value="male"
+        checked
+      />
+      <label class="form-check-label" for="male">Male</label>
+    </div>
+    <div class="form-check mb-3">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="gender"
+        id="female"
+        value="female"
+      />
+      <label class="form-check-label" for="female">Female</label>
+    </div>
+
+    <div class="mb-3">
+      <label for="activityLevel" class="form-label">Activity Level:</label>
+      <select class="form-select" id="activityLevel" required>
+        <option value="sedentary">Sedentary (little or no exercise)</option>
+        <option value="light">
+          Lightly active (light exercise/sports 1-3 days/week)
+        </option>
+        <option value="moderate">
+          Moderately active (moderate exercise/sports 3-5 days/week)
+        </option>
+        <option value="active">
+          Very active (hard exercise/sports 6-7 days a week)
+        </option>
+      </select>
+    </div>
+
+    <button type="button" onclick="calculateBMI()" class="btn btn-primary">
+      Calculate BMI
+    </button>
+  </form>
+
+  <div id="bmiResult" style="margin-top: 20px"></div>
+
+  <div class="mt-4">
+    <label for="goal" class="form-label">Select Your Fitness Goal:</label>
+    <select class="form-select" id="goal" required>
+      <option value="maintenance">Maintenance Calories</option>
+      <option value="weightGain">Weight Gain Calories</option>
+      <option value="weightLoss">Weight Loss Calories</option>
+    </select>
+  </div>
+
+  <div id="calorieResult" style="margin-top: 20px"></div>
+</div>

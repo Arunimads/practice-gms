@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-bg-color: #1c2331;
+    --nav-bg-color: #293241;
+    --nav-border-color: #445669;
+    --nav-hover-color: #fbfeab;
+    --header-bg-color: #333;
+    --header-text-color: white;
+    --box-shadow-color: rgba(0, 0, 0, 0.5);
+    --button-bg-color: #1c2331;
+}
+
+header {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    padding: 10px;
+    text-align: left;
+}
+
+nav {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background: linear-gradient(to bottom, var(--main-bg-color), var(--nav-bg-color));
+    border-right: 1px solid var(--nav-border-color);
+    overflow-x: hidden;
+    padding-top: 50px;
+    box-shadow: 0 0 10px var(--box-shadow-color);
+    transition: 0.5s;
+    border-radius: 0 10px 10px 0;
+}
+
+.modules-header {
+    padding: 10px;
+    color: #8aa4b8;
+}
+
+nav a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    display: block;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+nav a:hover {
+    color: var(--nav-hover-color);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+main {
+    margin-left: 0;
+    padding: 15px;
+}
+
+.menu-btn {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.registration-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.registration-form label,
+.registration-form input {
+    display: block;
+    margin-bottom: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.registration-form button {
+    background: linear-gradient(to bottom, var(--button-bg-color), var(--main-bg-color));
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        margin-left: 250px;
+    }
+}

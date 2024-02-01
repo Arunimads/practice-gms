@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness Plans</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Create a separate CSS file for styles -->
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+
+      .container {
+        margin-top: 50px;
+      }
+
+      .card {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-header {
+        background-color: #343a40;
+        color: #ffffff;
+        text-align: center;
+        padding: 15px;
+        border-radius: 15px 15px 0 0;
+      }
+
+      .card-body {
+        padding: 20px;
+      }
+
+      .card-footer {
+        background-color: #e9ecef;
+        border-radius: 0 0 15px 15px;
+        height: 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+        font-style: italic;
+        color: #007bff;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5 p-5 shadow rounded">
+      <div class="row gy-3">
+        <div class="col-lg-3">
+          <div class="card" style="background-color: #cd7f32">
+            <div class="card-header">
+              <h2>Strength Boost</h2>
+            </div>
+            <div class="card-body">
+              <input
+                type="radio"
+                name="strengthboost"
+                id=""
+                value="1month"
+                required
+              />
+              <label for="male">1 month: &#8377;1000</label><br />
+              <!-- Add the rest of your radio inputs and labels here -->
+            </div>
+            <div class="card-footer"></div>
+          </div>
+        </div>
+
+        <!-- Repeat the structure for the other two columns -->
+      </div>
+    </div>
+
+    <h1 class="text-center text-light-emphasis">
+      <i>Unleash Your Potential And Embrace A Healthier Lifestyle Today</i>
+    </h1>
+  </body>
+</html>

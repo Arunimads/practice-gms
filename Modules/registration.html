@@ -1,0 +1,83 @@
+<div class="container text-center text-bg-danger mt-5 p-2 rounded-top-5">
+  <h1>Registration</h1>
+</div>
+<div
+  class="container text-center mt-2 p-2 border border-3 bg-danger-subtle rounded-bottom-5 shadow"
+>
+  <form action="" class="">
+    <div class="mt-2 form-floating">
+      <input
+        type="text"
+        class="form-control w-50"
+        required
+        placeholder="enter first name"
+        id="fstname"
+      />
+      <label for="" class="form-label">First Name</label>&nbsp;&nbsp;&nbsp;
+    </div>
+    <div class="mt-2">
+      <!-- <label for=""> Last Name</label>&nbsp;&nbsp;&nbsp; -->
+      <input
+        type="text"
+        class="form-control-sm"
+        required
+        placeholder="enter last name"
+        id="lstname"
+      />
+    </div>
+    <div class="mt-2">
+      <!-- <label for="">Sex</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+      <input type="radio" name="gender" id="male" value="male" required />
+      <label for="male">MALE</label>
+      <input type="radio" name="gender" id="female" value="female" /><label
+        for="female"
+      >
+        FEMALE</label
+      >
+      <input type="radio" name="gender" id="others" value="others" /><label
+        for="others"
+      >
+        OTHERS</label
+      >
+    </div>
+    <div class="mt-2">
+      <!-- <label for="">Age</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+      <input
+        type="number"
+        placeholder="enter age"
+        class="form-control-sm"
+        required
+        id="age"
+      />
+    </div>
+    <div class="mt-2">
+      <!-- <label for="">Mobile Number</label> -->
+      <input
+        type="number"
+        placeholder="enter mobile number"
+        required
+        id="mobile"
+      />
+    </div>
+    <div class="mt-2">
+      <!-- <label for="">Address</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+      <textarea
+        name=""
+        id=""
+        cols="20"
+        rows="2"
+        required
+        placeholder="enter address"
+        id="address"
+      ></textarea>
+    </div>
+    <div>
+      <!-- <label for="">Join Date</label>&nbsp;&nbsp;&nbsp;&nbsp; -->
+      <input type="date" id="date" required placeholder="joindate" />
+    </div>
+    <div class="mt-2">
+      <button class="btn btn-primary">Clear</button>
+      <button class="btn btn-success" onclick="Regsave()">Save</button>
+    </div>
+  </form>
+</div>
