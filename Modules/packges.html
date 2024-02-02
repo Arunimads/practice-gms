@@ -1,24 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fitness Plans</title>
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Create a separate CSS file for styles -->
     <style>
       body {
         background-color: #f8f9fa;
       }
 
-      .container {
-        margin-top: 50px;
-      }
-
       .card {
         border: none;
+        transition: transform 0.3s;
         border-radius: 15px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .card:hover {
+        transform: scale(1.05);
       }
 
       .card-header {
@@ -30,52 +22,250 @@
       }
 
       .card-body {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
         padding: 20px;
       }
 
       .card-footer {
-        background-color: #e9ecef;
+        background-color: #f8f9fa;
+        border-top: 2px solid #dee2e6;
+        padding: 15px;
         border-radius: 0 0 15px 15px;
-        height: 20px;
       }
 
-      h1 {
-        font-size: 24px;
-        font-style: italic;
-        color: #007bff;
+      h6.text-light-emphasis {
         margin-top: 30px;
+        color: #343a40;
+        font-style: italic;
+      }
+
+      input[type="radio"] {
+        display: none;
+      }
+
+      .custom-radio {
+        display: inline-block;
+        position: relative;
+        padding-left: 30px;
+        margin-right: 15px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .custom-radio input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #fff;
+        border: 2px solid #343a40;
+        border-radius: 50%;
+      }
+
+      .custom-radio:hover .checkmark {
+        background-color: #f1f1f1;
+      }
+
+      .custom-radio input:checked ~ .checkmark {
+        background-color: #343a40;
+        border: 2px solid #343a40;
+      }
+
+      .custom-radio input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      .custom-radio .checkmark:after {
+        content: "";
+        position: absolute;
+        left: 9px;
+        top: 5px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #fff;
       }
     </style>
   </head>
+
   <body>
-    <div class="container mt-5 p-5 shadow rounded">
-      <div class="row gy-3">
-        <div class="col-lg-3">
-          <div class="card" style="background-color: #cd7f32">
+    <div class="container mt-5 text-capitalize">
+      <div class="row gy-3 alert-link">
+        <div class="col-lg-4">
+          <div class="card h-100" style="background-color: #cd7f32">
             <div class="card-header">
               <h2>Strength Boost</h2>
             </div>
             <div class="card-body">
-              <input
-                type="radio"
-                name="strengthboost"
-                id=""
-                value="1month"
-                required
-              />
-              <label for="male">1 month: &#8377;1000</label><br />
-              <!-- Add the rest of your radio inputs and labels here -->
+              <label class="custom-radio">
+                <input
+                  type="radio"
+                  name="MembershipPlan"
+                  id="Strength1"
+                  required
+                />
+                <span class="checkmark"></span>
+                1 month: &#8377;1000 </label
+              ><br />
+              <label class="custom-radio">
+                <input
+                  type="radio"
+                  name="MembershipPlan"
+                  id="Strength3"
+                  required
+                />
+                <span class="checkmark"></span>
+                3 month: &#8377;2800 </label
+              ><br />
+
+              <label class="custom-radio">
+                <input
+                  type="radio"
+                  name="MembershipPlan"
+                  id="Strength6"
+                  required
+                />
+                <span class="checkmark"></span>
+                6 month: &#8377;5200 </label
+              ><br />
+
+              <label class="custom-radio">
+                <input
+                  type="radio"
+                  name="MembershipPlan"
+                  id="Strength12"
+                  required
+                />
+                <span class="checkmark"></span>
+                12 months: &#8377;10000 <br> a complimentary 1-month
+                extension</label
+              ><br />
             </div>
             <div class="card-footer"></div>
           </div>
         </div>
 
-        <!-- Repeat the structure for the other two columns -->
+        <div class="col-lg-4">
+          <div class="card h-100" style="background-color: #ffd700">
+            <div class="card-header">
+              <h2>Strength + Cardio</h2>
+            </div>
+            <div class="card-body">
+              <label class="custom-radio">
+                <input
+                  type="radio"
+                  name="MembershipPlan"
+                  id="StrengthCardio1"
+                  required
+                />
+                <span class="checkmark"></span>
+                1 month: &#8377;1200 </label
+              ><br />
+              <label class="custom-radio">
+                <input
+                  type="radio"
+                  name="MembershipPlan"
+                  id="StrengthCardio3"
+                  required
+                />
+                <span class="checkmark"></span>
+                3 month: &#8377;3300 </label
+              ><br />
+
+              <label class="custom-radio">
+                <input
+                  type="radio"
+                  name="MembershipPlan"
+                  id="StrengthCardio6"
+                  required
+                />
+                <span class="checkmark"></span>
+                6 month: &#8377;6200 </label
+              ><br />
+
+              <label class="custom-radio">
+                <input
+                  type="radio"
+                  name="MembershipPlan"
+                  id="StrengthCardio12"
+                  required
+                />
+                <span class="checkmark"></span>
+                12 months: &#8377;10000 <br> a complimentary 1-month
+                extension</label
+              ><br />
+            </div>
+            <div class="card-footer"></div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card h-100" style="background-color: #e5e4e2">
+            <div class="card-header">
+              <h2>Personalized Training</h2>
+            </div>
+            <div class="card-body">
+              <label class="custom-radio">
+                <input
+                  type="radio"
+                  name="MembershipPlan"
+                  id="PersonalTraining1"
+                  required
+                />
+                <span class="checkmark"></span>
+                1 month: &#8377;5000 </label
+              ><br />
+              <label class="custom-radio">
+                <input
+                  type="radio"
+                  name="MembershipPlan"
+                  id="PersonalTraining3"
+                  required
+                />
+                <span class="checkmark"></span>
+                3 month: &#8377;13000 </label
+              ><br />
+
+              <label class="custom-radio">
+                <input
+                  type="radio"
+                  name="MembershipPlan"
+                  id="PersonalTraining6"
+                  required
+                />
+                <span class="checkmark"></span>
+                6 month: &#8377;25000 </label
+              ><br />
+
+              <label class="custom-radio">
+                <input
+                  type="radio"
+                  name="MembershipPlan"
+                  id="PersonalTraining12"
+                  required
+                />
+                <span class="checkmark"></span>
+                12 months: &#8377;10000 <br> a complimentary 1-month
+                extension</label
+              ><br />
+            </div>
+            <div class="card-footer"></div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <h1 class="text-center text-light-emphasis">
+    <h6 class="text-center text-light-emphasis mt-5">
       <i>Unleash Your Potential And Embrace A Healthier Lifestyle Today</i>
-    </h1>
-  </body>
-</html>
+    </h6>
