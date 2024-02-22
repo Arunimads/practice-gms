@@ -1,83 +1,65 @@
-<div class="container text-center text-bg-danger mt-5 p-2 rounded-top-5">
+<div class="container text-center text-bg-dark mt-5 p-2 rounded-top-5">
   <h1>Registration</h1>
 </div>
-<div
-  class="container text-center mt-2 p-2 border border-3 bg-danger-subtle rounded-bottom-5 shadow"
->
-  <form action="" class="">
-    <div class="mt-2 form-floating">
+<div class="container text-center mt-2 p-2 border border-3 bg-dark-subtle rounded-bottom-5 shadow">
+<div class="row">
+  <div class="col-6 form-floating mt-4">
+    
+    <input type="text" class="form-control bg-transparent border border-0 border-bottom" required id="" placeholder="Enter name">
+    <label for="" class="form-label">First Name</label>
+</div>
+<div class="col-6 form-floating mt-4">
+    
+  <input type="text" class="form-control bg-transparent border border-0 border-bottom" required id="" placeholder="Enter name">
+  <label for="" class="form-label">Last Name</label>
+</div>
+<div class="col-6 form-floating mt-4">
+  <input type="number" class="form-control bg-transparent border border-0 border-bottom" required id="" placeholder="Enter age">
+  <label for="" class="form-label">Age</label>
+
+</div>
+<div class="col-6 form-floating mt-4">
+  <input type="number" class="form-control bg-transparent border border-0 border-bottom" required id="" placeholder="Enter phone number">
+  <label for="" class="form-label">Phone number</label>
+
+</div>
+<div class="col-6 form-floating mt-4">
+  <input type="text" class="form-control bg-transparent border border-0 border-bottom" id="" required placeholder="Enter enter address">
+  <label for="" class="form-label">Address</label>
+  
+</div>
+<div class="col-6  mt-4">
+  
+  <label class="custom-radio float-start">
+    <input
+      type="radio"
+      name="gender"
+      id=""
+      required
+    /><span class="checkmark"></span>
+    Male</label>
+    <label class="custom-radio float-start ">
       <input
-        type="text"
-        class="form-control w-50"
-        required
-        placeholder="enter first name"
-        id="fstname"
-      />
-      <label for="" class="form-label">First Name</label>&nbsp;&nbsp;&nbsp;
-    </div>
-    <div class="mt-2">
-      <!-- <label for=""> Last Name</label>&nbsp;&nbsp;&nbsp; -->
-      <input
-        type="text"
-        class="form-control-sm"
-        required
-        placeholder="enter last name"
-        id="lstname"
-      />
-    </div>
-    <div class="mt-2">
-      <!-- <label for="">Sex</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-      <input type="radio" name="gender" id="male" value="male" required />
-      <label for="male">MALE</label>
-      <input type="radio" name="gender" id="female" value="female" /><label
-        for="female"
-      >
-        FEMALE</label
-      >
-      <input type="radio" name="gender" id="others" value="others" /><label
-        for="others"
-      >
-        OTHERS</label
-      >
-    </div>
-    <div class="mt-2">
-      <!-- <label for="">Age</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-      <input
-        type="number"
-        placeholder="enter age"
-        class="form-control-sm"
-        required
-        id="age"
-      />
-    </div>
-    <div class="mt-2">
-      <!-- <label for="">Mobile Number</label> -->
-      <input
-        type="number"
-        placeholder="enter mobile number"
-        required
-        id="mobile"
-      />
-    </div>
-    <div class="mt-2">
-      <!-- <label for="">Address</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-      <textarea
-        name=""
+        type="radio"
+        name="gender"
         id=""
-        cols="20"
-        rows="2"
         required
-        placeholder="enter address"
-        id="address"
-      ></textarea>
-    </div>
-    <div>
-      <!-- <label for="">Join Date</label>&nbsp;&nbsp;&nbsp;&nbsp; -->
-      <input type="date" id="date" required placeholder="joindate" />
-    </div>
-    <div class="mt-2">
-      <button class="btn btn-primary">Clear</button>
-      <button class="btn btn-success" onclick="Regsave()">Save</button>
-    </div>
-  </form>
+      /><span class="checkmark"></span>
+      Female</label>
+      <label class="custom-radio float-start">
+        <input
+          type="radio"
+          name="gender"
+          id=""
+          required
+        /><span class="checkmark"></span>
+        Others</label>
+
+</div>
+<div class="col-6 form-floating mt-4">
+  <input type="date" class="bg-dark-subtle float-start" required>
+</div>
+<div class="col-6 form-floating mt-4">
+<button type="button" class="btn btn-primary float-start">Clear</button> <button type="button" class="btn btn-success float-start" onclick="regsave()">Save</button></div>
+</div>
 </div>

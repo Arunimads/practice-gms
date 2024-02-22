@@ -7,7 +7,6 @@ function calculateBMI() {
 
   const bmi = calculateBMIValue(weight, height);
   const bmiCategory = getBMICategory(bmi);
-
   const bmiResult = `<strong>Your BMI:</strong> ${bmi.toFixed(
     2
   )} (${bmiCategory})`;
@@ -79,3 +78,4 @@ function calculateTDEE(bmr, activityLevel) {
       return bmr;
   }
 }
+

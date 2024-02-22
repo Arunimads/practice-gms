@@ -1,64 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gym Management System</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./style/bootstrap.min.css" />
-    <script src="./style/bootstrap.bundle.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="./style/styles.css" />
-  </head>
-  <body>
-    <nav>
-      <span class="close-btn" onclick="closeNav()">&times;</span>
-      <h2 class="modules-header">Modules</h2>
-      <a href="#" onclick="loadContent('./Modules/Dashboard.html')"
-        >Dashboard</a
-      >
-      <a href="#" onclick="loadContent('./Modules/registration.html')"
-        >Registration</a
-      >
-      <a href="#" onclick="loadContent('./Modules/packges.html')"
-        >Membership Packages</a
-      >
-      <a href="#" onclick="loadContent('./Modules/CheckIN.html')">Check-In</a>
-      <a href="#" onclick="loadContent('./Modules/MeasurementsTracker.html')"
-        >Body Measurements Tracker</a
-      >
-      <a href="#" onclick="loadContent('./Modules/Fitness Calculator.html')"
-        >Fitness Calculator</a
-      >
-      <a href="#" onclick="loadContent('./Modules/WorkoutLogger.html')"
-        >Workout Logger</a
-      >
-      <a href="#" onclick="loadContent('./Modules/Nutrition Suggestion.html')"
-        >Nutrition Suggestions</a
-      >
-    </nav>
 
-    <header class="bg-dark text-white">
-      <span class="menu-btn" onclick="openNav()"
-        >&#9776; Gym Management System</span
-      >
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gym Management System</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./style/bootstrap.min.css" />
+  <script src="./style/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="./style/styles.css" />
+</head>
 
-    <main id="main-content">
-      <h2>Hello Gym Goers</h2>
-    </main>
+<body>
+  <nav>
+    <span class="close-btn" onclick="closeNav()">&times;</span>
+    <h2 class="modules-header">Modules</h2>
+    <a href="#" onclick="loadContent('./Modules/Dashboard.html')">Dashboard</a>
+    <a href="#" onclick="loadContent('./Modules/registration.html')">Registration</a>
+    <a href="#" onclick="loadContent('./Modules/packges.html')">Membership Packages</a>
+    <a href="#" onclick="loadContent('./Modules/CheckIN.html')">Check-In</a>
+    <a href="#" onclick="loadContent('./Modules/MeasurementsTracker.html')">Body Measurements Tracker</a>
+    <a href="#" onclick="loadContent('./Modules/Fitness Calculator.html')">Fitness Calculator</a>
+    <a href="#" onclick="loadContent('./Modules/WorkoutLogger.html')">Workout Logger</a>
+    <a href="#" onclick="loadContent('./Modules/Nutrition Suggestion.html')">Nutrition Suggestions</a>
+  </nav>
 
-    <!-- Bootstrap JS and Popper.js -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jsqr"></script>
-    <script src="./ScriptFiles/MasterPage.js"></script>
-    <script src="./ScriptFiles/WorkoutLogger.js"></script>
-    <script src="./ScriptFiles/FitnessCalcultor.js"></script>
-    <script src="./ScriptFiles/CheckIN.js"></script>
-  </body>
+  <header class="bg-dark text-white">
+    <span class="menu-btn" onclick="openNav()">&#9776; Gym Management System</span>
+  </header>
+
+  <main id="main-content">
+    <h2>Hello Gym Goers</h2>
+  </main>
+  
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsqr"></script>
+  <script src="./ScriptFiles/MasterPage.js"></script>
+  <script src="./ScriptFiles/WorkoutLogger.js"></script>
+  <script src="./ScriptFiles/FitnessCalcultor.js"></script>
+  <script src="./ScriptFiles/CheckIN.js"></script>
+  <script src="./ScriptFiles/Registration.js"></script>
+</body>
+
 </html>

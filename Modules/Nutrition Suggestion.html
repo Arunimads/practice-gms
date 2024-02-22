@@ -1,117 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nutrition Suggestion App</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    />
-    <style>
-      body {
-        background-color: #f8f9fa;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nutrition Suggestion App</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 600px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center mb-4">Nutrition Suggestion App</h1>
+
+    <form id="nutritionForm">
+      <div class="mb-3">
+        <label for="goal" class="form-label">Select Your Fitness Goal:</label>
+        <select class="form-select" id="goal" required>
+          <option value="fatLoss">Fat Loss</option>
+          <option value="getInShape">Get in Shape</option>
+          <option value="gainMuscle">Gain Muscle Mass</option>
+          <option value="fitness">General Fitness</option>
+        </select>
+      </div>
+
+      <!-- Include more input fields for age, weight, height, etc. as needed -->
+
+      <button type="button" onclick="suggestNutrition()" class="btn btn-primary">
+        Get Nutrition Plan
+      </button>
+    </form>
+
+    <div id="nutritionResult" class="mt-4"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function suggestNutrition() {
+      // Fetch user input values
+      const goal = $("#goal").val();
+      // Add more variables for other input fields
+
+      // Simplified example: Generate a basic nutrition plan and meal suggestions based on the selected goal
+      let nutritionPlan = "";
+      let mealSuggestions = [];
+
+      switch (goal) {
+        case "fatLoss":
+          nutritionPlan =
+            "Focus on a calorie deficit and include more whole foods.";
+          mealSuggestions = [
+            "Breakfast: Scrambled eggs with spinach and whole-grain toast",
+            "Lunch: Grilled chicken salad with mixed vegetables and quinoa",
+            "Dinner: Baked salmon with sweet potatoes and broccoli",
+            // Add more meal suggestions for snacks and other meals
+          ];
+          break;
+        case "getInShape":
+          nutritionPlan =
+            "Balanced diet with a mix of protein, carbohydrates, and healthy fats.";
+          mealSuggestions = [
+            "Breakfast: Oatmeal with sliced bananas, chia seeds, and honey",
+            "Lunch: Lentil soup with whole-grain crackers and vegetable wrap",
+            "Dinner: Stir-fried tofu with brown rice and sautéed kale",
+            // Add more meal suggestions for snacks and other meals
+          ];
+          break;
+        case "gainMuscle":
+          nutritionPlan =
+            "Increase protein intake and consume a surplus of calories.";
+          mealSuggestions = [
+            "Breakfast: Smoothie with spinach, banana, berries, almond milk, and protein powder",
+            "Lunch: Quinoa salad with chickpeas, cherry tomatoes, and feta cheese",
+            "Dinner: Grilled shrimp with quinoa and roasted Brussels sprouts",
+            // Add more meal suggestions for snacks and other meals
+          ];
+          break;
+        case "fitness":
+          nutritionPlan = "Maintain a well-balanced diet and stay hydrated.";
+          mealSuggestions = [
+            "Breakfast: Greek yogurt with berries and whole-grain toast",
+            "Lunch: Grilled vegetable salad with quinoa or brown rice",
+            "Dinner: Mixed green salad with grilled chicken and olive oil dressing",
+            // Add more meal suggestions for snacks and other meals
+          ];
+          break;
       }
-      .container {
-        max-width: 600px;
-        margin-top: 50px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1 class="text-center mb-4">Nutrition Suggestion App</h1>
 
-      <form id="nutritionForm">
-        <div class="mb-3">
-          <label for="goal" class="form-label">Select Your Fitness Goal:</label>
-          <select class="form-select" id="goal" required>
-            <option value="fatLoss">Fat Loss</option>
-            <option value="getInShape">Get in Shape</option>
-            <option value="gainMuscle">Gain Muscle Mass</option>
-            <option value="fitness">General Fitness</option>
-          </select>
-        </div>
-
-        <!-- Include more input fields for age, weight, height, etc. as needed -->
-
-        <button
-          type="button"
-          onclick="suggestNutrition()"
-          class="btn btn-primary"
-        >
-          Get Nutrition Plan
-        </button>
-      </form>
-
-      <div id="nutritionResult" class="mt-4"></div>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      function suggestNutrition() {
-        // Fetch user input values
-        const goal = $("#goal").val();
-        // Add more variables for other input fields
-
-        // Simplified example: Generate a basic nutrition plan and meal suggestions based on the selected goal
-        let nutritionPlan = "";
-        let mealSuggestions = [];
-
-        switch (goal) {
-          case "fatLoss":
-            nutritionPlan =
-              "Focus on a calorie deficit and include more whole foods.";
-            mealSuggestions = [
-              "Breakfast: Scrambled eggs with spinach and whole-grain toast",
-              "Lunch: Grilled chicken salad with mixed vegetables and quinoa",
-              "Dinner: Baked salmon with sweet potatoes and broccoli",
-              // Add more meal suggestions for snacks and other meals
-            ];
-            break;
-          case "getInShape":
-            nutritionPlan =
-              "Balanced diet with a mix of protein, carbohydrates, and healthy fats.";
-            mealSuggestions = [
-              "Breakfast: Oatmeal with sliced bananas, chia seeds, and honey",
-              "Lunch: Lentil soup with whole-grain crackers and vegetable wrap",
-              "Dinner: Stir-fried tofu with brown rice and sautéed kale",
-              // Add more meal suggestions for snacks and other meals
-            ];
-            break;
-          case "gainMuscle":
-            nutritionPlan =
-              "Increase protein intake and consume a surplus of calories.";
-            mealSuggestions = [
-              "Breakfast: Smoothie with spinach, banana, berries, almond milk, and protein powder",
-              "Lunch: Quinoa salad with chickpeas, cherry tomatoes, and feta cheese",
-              "Dinner: Grilled shrimp with quinoa and roasted Brussels sprouts",
-              // Add more meal suggestions for snacks and other meals
-            ];
-            break;
-          case "fitness":
-            nutritionPlan = "Maintain a well-balanced diet and stay hydrated.";
-            mealSuggestions = [
-              "Breakfast: Greek yogurt with berries and whole-grain toast",
-              "Lunch: Grilled vegetable salad with quinoa or brown rice",
-              "Dinner: Mixed green salad with grilled chicken and olive oil dressing",
-              // Add more meal suggestions for snacks and other meals
-            ];
-            break;
-        }
-
-        // Display the nutrition plan and meal suggestions
-        $("#nutritionResult").html(`
+      // Display the nutrition plan and meal suggestions
+      $("#nutritionResult").html(`
             <h4 class="mb-3">Your Nutrition Plan:</h4>
             <p>${nutritionPlan}</p>
             
             <h4 class="mt-4">Meal Suggestions:</h4>
             <ul>${mealSuggestions
-              .map((suggestion) => `<li>${suggestion}</li>`)
-              .join("")}</ul>
+          .map((suggestion) => `<li>${suggestion}</li>`)
+          .join("")}</ul>
         `);
-      }
-    </script>
-  </body>
+    }
+  </script>
+</body>
+
 </html>
