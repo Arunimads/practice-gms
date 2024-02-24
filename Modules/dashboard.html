@@ -1,0 +1,68 @@
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.statistics {
+  margin-bottom: 40px;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat {
+  flex-basis: 30%;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.upcoming-events ul {
+  list-style: none;
+  padding: 0;
+}
+
+.upcoming-events li {
+  margin-bottom: 10px;
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+}
+</style>
+<body>
+  <div class="container">
+    <header>
+      <h1>Gym Management System Dashboard</h1>
+    </header>
+    <section class="statistics">
+      <h2>Statistics</h2>
+      <canvas id="statistics-chart"></canvas>
+    </section>
+    <section class="upcoming-events">
+      <h2>Upcoming Events</h2>
+      <ul id="events-list">
+        <li>Yoga Class - February 25th</li>
+        <li>Boxing Training - February 27th</li>
+      </ul>
+    </section>
+  </div>
+</body>
